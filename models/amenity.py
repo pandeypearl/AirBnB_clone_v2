@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """ State Module for HBNB project """
 from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String, Table, ForeignKey, Float
+from sqlalchemy import Column, String, ForeignKey, Integer, Float, Table
 from sqlalchemy.orm import relationship
-from models.place import Place
 
 place_amenity = Table('place_amenity', Base.metadata,
                       Column('place_id', String(60),
