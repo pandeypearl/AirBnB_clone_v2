@@ -14,13 +14,14 @@ from models.amenity import Amenity
 from models.review import Review
 from shlex import split
 
+
 class HBNBCommand(cmd.Cmd):
     """ Contains the functionality for the HBNB console"""
     prompt = "(hbnb) "
 
     all_classes = {'BaseModel', 'User', 'Place',
-                    'State', 'City', 'Amenity',
-                    'Review'}
+                   'State', 'City', 'Amenity',
+                   'Review'}
 
     def emptyline(self):
         """Ignores empty spaces"""
