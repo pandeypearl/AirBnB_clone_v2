@@ -62,7 +62,6 @@ class TestConsole(unittest.TestCase):
 
     @unittest.skipIf(getenv("HBNB_TYPE_STORAGE") == "db",
                      "Not using db")
-
     def test_create(self):
         """Test create command inpout"""
         with patch('sys.stdout', new=StringIO()) as f:
@@ -255,6 +254,7 @@ class TestConsole(unittest.TestCase):
         def test_update_db(self):
             """Test alternate destroy command inpout DB"""
             return True
+
 
 if __name__ == "__main__":
     unittest.main()
