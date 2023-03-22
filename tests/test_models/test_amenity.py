@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-""" Tests for Amenity """
+"""test for amenity"""
 import unittest
 import os
 from models.amenity import Amenity
 from models.base_model import BaseModel
 import pep8
-from os import getenv
 
 
 class TestAmenity(unittest.TestCase):
