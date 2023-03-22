@@ -25,12 +25,12 @@ class TestConsole(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """setup for the test"""
-        cls.console = HBNBCommand()
+        cls.consol = HBNBCommand()
 
     @classmethod
     def tearDownClass(cls):
         """at the end of the test this will tear it down"""
-        del cls.console
+        del cls.consol
 
     def tearDown(self):
         """Remove temporary file (file.json) created as a result"""
@@ -65,18 +65,18 @@ class TestConsole(unittest.TestCase):
     def test_create(self):
         """Test create command inpout"""
         with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("create")
+            self.consol.onecmd("create")
             self.assertEqual(
                 "** class name missing **\n", f.getvalue())
         with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("create asdfsfsd")
+            self.consol.onecmd("create asdfsfsd")
             self.assertEqual(
                 "** class doesn't exist **\n", f.getvalue())
 
         with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("create User")
+            self.consol.onecmd("create User")
         with patch('sys.stdout', new=StringIO()) as f:
-            self.console.onecmd("all User")
+            self.consol.onecmd("all User")
             self.assertEqual(
                 "[[User]", f.getvalue()[:7])
 
