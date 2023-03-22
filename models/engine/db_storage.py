@@ -73,7 +73,7 @@ class DBStorage():
         from sqlalchemy.orm import sessionmaker, scoped_session
 
         if getenv("HBNB_ENV") == "test":
-            Base.metadata.drop_all(self.__engine)
+            Base.drop_all(self.__engine)
         Base.metadata.create_all(self.__engine)
 
         session_factory = sessionmaker(bind=self.__engine,
