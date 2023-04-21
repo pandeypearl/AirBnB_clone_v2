@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Starts a Flask web app and fetches data fromstorage engine """
+""" Starts a Flask web app and fetches data from storage engine """
 from flask import Flask, render_template
 from models import storage
 from models.state import State
