@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 @app.teardown_appcontext
-def close_session(foo):
+def close_session(cls):
     """ Closes Session """
     storage.close()
 
