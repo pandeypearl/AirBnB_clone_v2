@@ -17,7 +17,7 @@ def close_session(foo):
 def hbnb(id=None):
     """ Displays HTML page """
     states = storage.all(State)
-    amenities = storage.all(Amenities)
+    amenities = storage.all(Amenity)
     places = storage.all(Place)
     return render_template('100-hbnb.html', **locals())
 
